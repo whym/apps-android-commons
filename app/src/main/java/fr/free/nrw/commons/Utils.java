@@ -301,4 +301,15 @@ public class Utils {
         }
         return title;
     }
+
+    public static int func1
+    (int x)
+    {
+        return func2(x * 2);
+        // DELETE ME
+    }
+    public static int func2(int x) {
+        return func1(x / 2);
+        // DELETE ME
+    }
 }
