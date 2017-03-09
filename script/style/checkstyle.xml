@@ -32,7 +32,8 @@
     </module>
 
     <module name="VisibilityModifier">
-        <property name="immutableClassCanonicalNames" value="true"/>
+        <property name="ignoreAnnotationCanonicalNames" value="true"/>
+        <property name="packageAllowed" value="true"/>
     </module>
 
     <module name="TreeWalker">
