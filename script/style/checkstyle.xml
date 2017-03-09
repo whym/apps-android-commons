@@ -31,6 +31,10 @@
         <property name="eachLine" value="true"/>
     </module>
 
+    <module name="VisibilityModifier">
+        <property name="immutableClassCanonicalNames" value="true"/>
+    </module>
+
     <module name="TreeWalker">
         <module name="OuterTypeFilename"/>
         <module name="IllegalTokenText">
