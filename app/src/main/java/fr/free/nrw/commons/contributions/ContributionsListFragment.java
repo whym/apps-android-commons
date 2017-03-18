@@ -23,6 +23,8 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import fr.free.nrw.commons.AboutActivity;
 import fr.free.nrw.commons.CommonsApplication;
 import fr.free.nrw.commons.R;
@@ -37,9 +39,9 @@ public class ContributionsListFragment extends Fragment {
         void refreshSource();
     }
 
-    private GridView contributionsList;
-    private TextView waitingMessage;
-    private TextView emptyMessage;
+    @BindView(R.id.contributionsList) GridView contributionsList;
+    @BindView(R.id.waitingMessage) TextView waitingMessage;
+    @BindView(R.id.emptyMessage) TextView emptyMessage;
 
     private ContributionController controller;
     private static final String TAG = "ContributionsList";
@@ -47,11 +49,7 @@ public class ContributionsListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_contributions, container, false);
-
-
-        contributionsList = (GridView) v.findViewById(R.id.contributionsList);
-        waitingMessage = (TextView) v.findViewById(R.id.waitingMessage);
-        emptyMessage = (TextView) v.findViewById(R.id.emptyMessage);
+        ButterKnife.bind(this, v);
 
         contributionsList.setOnItemClickListener((AdapterView.OnItemClickListener)getActivity());
         if(savedInstanceState != null) {
