@@ -44,6 +44,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 public class Utils {
     // long line ------------------------------------------------------------------------------------
+    // long line ------------------------------------------------------------------------------------
     private static final String TAG = Utils.class.getName();
 
     // Get SHA1 of file from input stream
