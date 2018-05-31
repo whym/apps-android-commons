@@ -28,4 +28,13 @@ class UtilsTest {
     @Test fun `capitalize - pass Japanase characters`() {
         Assert.assertThat(Utils.capitalize("こんにちは"), _is("こんにちは"))
     }
+
+    @Test fun `makeThumbBaseUrl - Test jpg without prefix`() {
+        Assert.assertThat(Utils.makeThumbBaseUrl("Test.jpg"), _is(BuildConfig.IMAGE_URL_BASE + "/b/bd/Test.jpg"))
+    }
+
+    @Test fun `makeThumbBaseUrl - Test jpg with prefix should work as well`() {
+        Assert.assertThat(Utils.makeThumbBaseUrl("File:Test.jpg"), _is(Utils.makeThumbBaseUrl("Test.jpg")))
+    }
+
 }

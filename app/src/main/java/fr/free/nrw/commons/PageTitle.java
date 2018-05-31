@@ -27,7 +27,7 @@ public class PageTitle {
     }
 
     /**
-     * Get the canonicalized title for displaying (such as "File:My example.jpg").
+     * Get the canonical title for DB and URLs (such as "File:My_example.jpg").
      *
      * @return canonical title
      */
@@ -41,9 +41,9 @@ public class PageTitle {
     }
 
     /**
-     * Get the canonical title for DB and URLs (such as "File:My_example.jpg").
+     * Get the canonicalized title for displaying (such as "File:My example.jpg").
      *
-     * @return canonical title
+     * @return title
      */
     @NonNull
     public String getDisplayText() {
@@ -61,7 +61,6 @@ public class PageTitle {
         String uriStr = BuildConfig.HOME_URL + Uri.encode(getPrefixedText(), ":/");
         return Uri.parse(uriStr);
     }
-
 
     /**
      * Convert to a mobile URI
