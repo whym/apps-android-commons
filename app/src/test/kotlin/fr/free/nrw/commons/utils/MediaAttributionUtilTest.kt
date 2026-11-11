@@ -29,7 +29,6 @@ class MediaAttributionUtilTest {
         appContext = ApplicationProvider.getApplicationContext()
     }
 
-    @Disabled("not needed")
     @Test
     fun thisdoesnotpass() {
         assertEquals(1, 2)
