@@ -10,6 +10,7 @@ import org.junit.Assert.*
 import org.junit.Before
 
 import org.junit.Test
+import org.junit.jupiter.api.Disabled
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.mock
@@ -28,6 +29,11 @@ class MediaAttributionUtilTest {
         appContext = ApplicationProvider.getApplicationContext()
     }
 
+    @Disabled("not needed")
+    @Test
+    fun thisdoesnotpass() {
+        assertEquals(1, 2)
+    }
     @Test
     fun getTagLineWithUploaderOnly() {
         val media = mock(Media::class.java)
